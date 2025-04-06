@@ -22,27 +22,27 @@ def sum_of_n(n):
         s+=(a+b)
 
 if __name__=="__main__":
+    while True:
+        print("1. Fibonacci Series within n\n2. Fibonacci Series upto n terms\n3. Sum of the Fibonacci Series within n")
+        choice=int(input("Enter your choice (1 or 2 or 3): "))
+        if choice==1:
+            try:
+                n=int(input("Enter the value of n: "))
+                within_n(n)
+            except:
+                print("Invalid input")
 
-    print("1. Fibonacci Series within n\n2. Fibonacci Series upto n terms\n3. Sum of the Fibonacci Series within n")
-    choice=int(input("Enter your choice (1 or 2 or 3): "))
-    if choice==1:
-        try:
-            n=int(input("Enter the value of n: "))
-            within_n(n)
-        except:
-            print("Invalid input")
+        elif choice==2:
+            try:
+                n=int(input("Enter the value of n: "))
+                upto_n(n)
+            except:
+                print("Invalid input")
 
-    elif choice==2:
-        try:
-            n=int(input("Enter the value of n: "))
-            upto_n(n)
-        except:
-            print("Invalid input")
+        elif choice==3:
+            try:
+                n=int(input("Enter the value of n: "))
+                sum_of_n(n)
 
-    elif choice==3:
-        try:
-            n=int(input("Enter the value of n: "))
-            sum_of_n(n)
-
-        except:
-            print("Invalid input")
+            except:
+                print("Invalid input")
