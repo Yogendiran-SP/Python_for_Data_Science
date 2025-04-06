@@ -31,7 +31,7 @@ if __name__=="__main__":
         elif choice==2:
             try:
                 a=int(input("Enter the number: "))
-                print(*converting_to_str(a),"\n_____________________________________________\n")
+                print(*converting_int_to_str(a),"\n_____________________________________________\n")
             except:
                 print("Invalid input")
         elif choice==3:
