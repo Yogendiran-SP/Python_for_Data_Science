@@ -43,5 +43,6 @@ if __name__=="__main__":
         try:
             n=int(input("Enter the value of n: "))
             sum_of_n(n)
+
         except:
             print("Invalid input")
