@@ -2,7 +2,7 @@ def getting_as_str(a):
     res = a, "is an Armstrong Number" if a==a[::-1] else "is not an Armstrong Number"
     return res
 
-def converting_to_str(a):
+def converting_int_to_str(a):
     a=str(a)
     res = a, "is an Armstrong Number" if a==a[::-1] else "is not an Armstrong Number"
     return res
