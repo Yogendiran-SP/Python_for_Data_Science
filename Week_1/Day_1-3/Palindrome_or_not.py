@@ -1,10 +1,10 @@
 def getting_as_str(a):
-    res = a, "is an Armstrong Number" if a==a[::-1] else "is not an Armstrong Number"
+    res = a, "is an Palindrome" if a==a[::-1] else "is not an Palindrome"
     return res
 
 def converting_int_to_str(a):
     a=str(a)
-    res = a, "is an Armstrong Number" if a==a[::-1] else "is not an Armstrong Number"
+    res = a, "is an Palindrome" if a==a[::-1] else "is not an Palindrome"
     return res
 
 def getting_as_int(a):
@@ -14,13 +14,13 @@ def getting_as_int(a):
         res+=(a%10)*i
         a=a//10
         i*=10
-    result = copy, "is an Armstrong Number" if copy==res else "is not an Armstrong Number"
+    result = copy, "is an Palindrome" if copy==res else "is not an Palindrome"
     return result
 
 if __name__=="__main__":
     while True:
         print("CHECKING WHETHER A NUMBER IS PALINDROME OR NOT\n_____________________________________________\n")
-        print("1. Getting input as a itself\n2. Converting integer input to string\n3. Geeting input as a integer")
+        print("1. Getting input as a string itself\n2. Converting integer input to string\n3. Geeting input as a integer")
         choice=int(input("Enter your choice (1 or 2 or 3): "))
         if choice==1:
             try:
