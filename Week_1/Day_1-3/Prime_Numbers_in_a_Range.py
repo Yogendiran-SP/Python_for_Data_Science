@@ -9,13 +9,10 @@ def is_prime(n):
         return False
 
 def within_n(n):
-    for i in range(1,n+1):
-        if is_prime(i):
-            print(i,end=" ")
+    print(*[i for i in range(2,n+1) if is_prime(i)])
 
 def n_prime_numbers(n):
-    i=1
-    var=1
+    var,i=1,1
     while (i<=n):
         if is_prime(var):
             print(var,end=" ")
@@ -24,15 +21,17 @@ def n_prime_numbers(n):
 
 def sum_within_n(n):
     sum=0
-    for i in range(1,n+1):
+    for i in range(2,n+1):
         if is_prime(i):
             sum+=i
+        if sum>n:
+            sum-=i
+            break
     return sum
 
 def sum_of_n_prime_numbers(n):
     sum=0
-    i=1
-    var=1
+    var,i=1,1
     while (i<=n):
         if is_prime(var):
             i+=1
@@ -50,9 +49,8 @@ if __name__=="__main__":
 
         if choice==1:
             try:
-                n=int(input("Enter the value of n: "))
-                res=n,"is a Prime Number" if is_prime(n) else "is not an Prime Number"
-                print(*res,"\n________________________\n")
+                n=int(input("Enter the value of n: "))  
+                print(n,"is a Prime Number\n________________________\n" if is_prime(n) else "is not an Prime Number\n________________________\n")
 
             except:
                 print("Invalid input")
