@@ -1,7 +1,8 @@
 def without_using_recursion(n):
-    for i in range(1,n):
-        n*=i
-    return n
+    f=1
+    for i in range(1,n+1):
+        f*=i
+    return f
 
 def using_recursion(n):
     if n==1 or n==0:
@@ -18,13 +19,22 @@ if __name__=="__main__":
         if choice==1:
             try:
                 n=int(input("Enter the value of n: "))
-                print("\nFactorial of",n,"is",without_using_recursion(n),"\n_________________________________________\n")
+                if n>0:
+                    print("\nFactorial of",n,"is",without_using_recursion(n),"\n_________________________________________\n")
+                else:
+                    print("\nFactorial is not possible for non-positive numbers","\n_________________________________________\n")
             except:
                 print("Invalid input")
 
         elif choice==2:
             try:
-                n=int(input("Enter the value of n: "))
-                print("\nThe Factorial of",n,"is",using_recursion(n),"\n_________________________________________\n")
+                if n>0:
+                    n=int(input("Enter the value of n: "))
+                    print("\nThe Factorial of",n,"is",using_recursion(n),"\n_________________________________________\n")
+                else:
+                    print("\nFactorial is not possible for non-positive numbers","\n_________________________________________\n")
             except:
                 print("Invalid input")
+        
+        else:
+            print("Inavlid choice")
