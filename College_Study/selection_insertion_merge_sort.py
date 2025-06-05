@@ -64,6 +64,6 @@ def merge(left, right):
 
 
 l=list(map(int,input("Enter the list elements: ").split()))
-# print("Using selection sort:",selection(l))
-# print("Using insertion sort:",insertion(l))
+print("Using selection sort:",selection(l))
+print("Using insertion sort:",insertion(l))
 print("Using merge sort:",merge_sort(l))
