@@ -18,8 +18,7 @@ def mode(l):
             mode.append(i)
     return mode
 
-print("Enter the elements of the list:")
-l=list(map(int,input().split()))
+l=list(map(int,input("Enter the elements of the list: ").split()))
 print("Mean of the list: ",round(mean(l),1))
 print("Median of the list: ",median(l))
 print("Mode of the list: ",mode(l))
